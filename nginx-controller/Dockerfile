@@ -9,4 +9,5 @@ COPY nginx-ingress nginx/ingress.tmpl nginx/nginx.conf.tmpl /
 
 RUN rm /etc/nginx/conf.d/*
 
-ENTRYPOINT ["/nginx-ingress"]
+#ENTRYPOINT /nginx-ingress
+#ENTRYPOINT ["/nginx-ingress"]

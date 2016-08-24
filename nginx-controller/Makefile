@@ -1,7 +1,7 @@
 all: push
 
 TAG = 0.3
-PREFIX = nginxdemos/nginx-ingress
+PREFIX = 172.16.1.101:5000/ktaka/nginx-ingress
 
 DOCKER_RUN = docker run --rm -v $(shell pwd)/../:/go/src/github.com/nginxinc/kubernetes-ingress -w /go/src/github.com/nginxinc/kubernetes-ingress/nginx-controller/
 GOLANG_CONTAINER = golang:1.6

@@ -14,7 +14,8 @@ spec:
         app: nginx-ingress
     spec:
       containers:
-      - image: nginxdemos/nginx-ingress:0.3
+      #- image: nginxdemos/nginx-ingress:0.3
+      - image: 172.16.1.101:5000/ktaka/nginx-ingress:0.3 
         imagePullPolicy: Always
         name: nginx-ingress
         ports:
@@ -27,3 +28,4 @@ spec:
         #args:
          #- -v=3
          #- -nginx-configmaps=default/nginx-config
+
