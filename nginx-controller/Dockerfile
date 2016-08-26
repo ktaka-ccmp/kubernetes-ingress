@@ -8,7 +8,11 @@ RUN ln -sf /proc/1/fd/1 /var/log/nginx/access.log \
 COPY nginx-ingress nginx/ingress.tmpl nginx/nginx.conf.tmpl /
 
 RUN rm /etc/nginx/conf.d/*
-RUN apt-get update && apt-get install net-tools less tcpdump
+RUN apt-get update ; apt-get install wget -y
+RUN wget http://nginx.org/keys/nginx_signing.key -O - |apt-key add -
+RUN apt-get update && apt-get install net-tools less tcpdump -y
+
+
 
 #ENTRYPOINT /nginx-ingress
 ENTRYPOINT ["/nginx-ingress"]
