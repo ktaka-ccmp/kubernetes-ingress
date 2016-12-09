@@ -1,5 +1,6 @@
 #!/bin/bash 
 
+kubectl delete -f nginx-ingress-svc.yaml
 kubectl delete -f nginx-ingress-rc.yaml
 kubectl delete -f cafe-ingress.yaml
 kubectl delete -f cafe-secret.yaml

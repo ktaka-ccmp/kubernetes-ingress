@@ -1,6 +1,7 @@
 #!/bin/bash 
 
 kubectl create -f nginx-ingress-rc.yaml
+kubectl create -f nginx-ingress-svc.yaml
 #sleep 10
 kubectl create -f tea-rc.yaml
 kubectl create -f tea-svc.yaml
