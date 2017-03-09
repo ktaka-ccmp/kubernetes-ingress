@@ -13,6 +13,7 @@ spec:
       labels:
         app: nginx-ingress
     spec:
+      hostNetwork: true
       nodeSelector:
         role: lvs 
       containers:
@@ -31,8 +32,9 @@ spec:
          - -v=3
          - -nginx-configmaps=default/nginx-config
       - name: vrrp
-        image: 10.0.0.10:5000/test/keepalived
+        image: 10.0.1.10:5000/test/keepalived
         securityContext:
+          privileged: true
           capabilities:
             add:
               - NET_ADMIN
