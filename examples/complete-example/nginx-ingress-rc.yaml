@@ -5,7 +5,7 @@ metadata:
   labels:
     app: nginx-ingress
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     app: nginx-ingress
   template:
@@ -31,7 +31,7 @@ spec:
          - -v=3
          - -nginx-configmaps=default/nginx-config
       - name: vrrp
-        image: 10.0.0.10:5000/test/keepalived
+        image: 10.0.0.100:5000/test/keepalived
         securityContext:
           capabilities:
             add:
