@@ -12,3 +12,5 @@ spec:
     name: http
   selector:
     app: coffee
+  clusterIP: 10.0.255.11
+
