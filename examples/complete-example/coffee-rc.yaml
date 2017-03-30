@@ -9,8 +9,11 @@ spec:
       labels:
         app: coffee
     spec:
+      nodeSelector:
+        role: web
       containers:
       - name: coffee
-        image: nginxdemos/hello
+        image: 10.0.0.100:5000/test/nginx
+        #image: nginxdemos/hello
         ports:
         - containerPort: 80
