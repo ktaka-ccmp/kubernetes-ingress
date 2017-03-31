@@ -17,12 +17,6 @@ server {
 	server_name {{$server.Name}};
 	{{end}}
 
-	{{if $server.SSL}}
-	if ($scheme = http) {
-		return 301 https://$host$request_uri;
-	}
-	{{end}}
-
 	{{range $location := $server.Locations}}
 	location {{$location.Path}} {
 		proxy_connect_timeout {{$location.ProxyConnectTimeout}};

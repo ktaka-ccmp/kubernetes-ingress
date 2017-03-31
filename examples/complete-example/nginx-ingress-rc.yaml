@@ -17,8 +17,7 @@ spec:
         role: lvs 
       containers:
       - name: nginx-ingress
-        image: nginxdemos/nginx-ingress:0.3
-      #- image: 172.16.1.101:5000/ktaka/nginx-ingress:0.3 
+        image: 10.0.0.100:5000/test/nginx-ingress:0.3 
         imagePullPolicy: Always
         ports:
         - containerPort: 80
