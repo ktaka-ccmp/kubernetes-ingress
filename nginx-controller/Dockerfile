@@ -12,8 +12,5 @@ RUN apt-get update ; apt-get install wget curl -y
 RUN wget http://nginx.org/keys/nginx_signing.key -O - |apt-key add -
 RUN apt-get update && apt-get install net-tools less tcpdump jq -y
 
-#ENTRYPOINT /nginx-ingress
-#ENTRYPOINT ["/nginx-ingress"]
-
-ENTRYPOINT sleep 10000
+ENTRYPOINT ["/nginx-ingress"]
 
