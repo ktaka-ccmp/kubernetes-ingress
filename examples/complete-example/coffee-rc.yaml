@@ -10,7 +10,7 @@ spec:
         app: coffee
     spec:
       nodeSelector:
-        role: web
+        web: "yes"
       containers:
       - name: coffee
         image: 10.0.0.100:5000/test/nginx

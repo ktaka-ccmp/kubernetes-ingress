@@ -14,7 +14,7 @@ spec:
         app: nginx-ingress
     spec:
       nodeSelector:
-        role: lvs 
+        lvs: "yes"
       containers:
       - name: nginx-ingress
         image: 10.0.0.100:5000/test/nginx-ingress:0.3 
